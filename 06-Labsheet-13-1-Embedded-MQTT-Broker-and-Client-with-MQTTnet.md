@@ -135,6 +135,7 @@ dotnet run
 ```
 *สังเกตข้อความบนคอนโซลว่าเซิร์ฟเวอร์กำลังฟังที่พอร์ต 5000 (HTTP) และ 1883 (MQTT)*
 
+
 #### 2. เปิดหน้าต่าง PowerShell ที่สอง: ทดสอบ Subscribe หัวข้อ
 ใช้คำสั่ง `mosquitto_sub` เพื่อดักฟังข้อความจาก Embedded Broker ของเรา (ระบุพารามิเตอร์ `-i` เพื่อกำหนด Client ID):
 ```powershell
@@ -153,6 +154,12 @@ mosquitto_pub -h 127.0.0.1 -p 1883 -t "test/edge/topic" -m "Hello from CLI via K
 #### 4. สังเกตผลลัพธ์
 * หน้าต่าง Kestrel จะพิมพ์ Log สีฟ้าว่าดักจับข้อความได้ถูกต้อง
 * หน้าต่าง `mosquitto_sub` จะได้รับข้อความที่ถูกส่งต่อผ่าน Broker สำเร็จทันที
+
+<img width="1428" height="477" alt="image" src="https://github.com/user-attachments/assets/b2d4c760-f442-4445-8e41-539c8e0400a9" />
+
+
+<img width="1310" height="305" alt="image" src="https://github.com/user-attachments/assets/97729174-522e-45b2-8114-db4f155fe355" />
+
 
 ---
 
